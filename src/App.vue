@@ -2,9 +2,9 @@
   <v-app>
     <v-container class="my_container fill-height justify-center" fluid>
       <v-row class="block justify-center">
-        <v-col md="6" lg="4" sm="12" xs="12" cols="12">
+        <!-- <v-col md="6" lg="4" sm="12" xs="12" cols="12">
           <h1 :class="height >= 500 ? 'my_title' : 'my_title_mobile'">
-            Apropos
+            apropos
           </h1>
         </v-col>
         <v-col
@@ -14,33 +14,14 @@
           sm="12"
           xs="12"
           cols="12"
-        >
-          <p :class="height >= 500 ? 'text_coming' : 'text_coming_mobile'">
-            Our website is coming soon
-          </p>
-          <p :class="height >= 500 ? 'text_connect' : 'text_connect_mobile'">
-            In the mean time let's connect with us
-          </p>
-          <v-row no-gutters :class="height >= 500 ? '' : 'justify-center'">
-            <v-icon size="38" color="#eceff1" style="cursor: pointer"
-              >mdi-discord</v-icon
-            >
-            <v-icon size="38" class="my_icon" color="#eceff1"
-              >mdi-twitter</v-icon
-            >
-            <v-icon size="38" class="my_icon" color="#eceff1"
-              >mdi-instagram</v-icon
-            >
-            <v-icon size="38" class="my_icon" color="#eceff1"
-              >mdi-twitch</v-icon
-            >
-          </v-row>
-        </v-col>
+        > -->
+        <img src="./assets/apropos_logo.png" class="logo_app" />
+        <!-- </v-col> -->
       </v-row>
     </v-container>
-    <v-footer padless color="#212121">
+    <v-footer padless color="#FFFFFF">
       <v-col class="text-right" cols="12">
-        <span style="color: white" class="my_footer"> Apropos © 2022. </span>
+        <span style="color: black" class="my_footer"> Apropos © 2022. </span>
       </v-col>
     </v-footer>
   </v-app>
@@ -75,10 +56,11 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .my_container {
-  background-color: #212121;
+  background-color: #ffffff;
 }
+
 .my_title {
-  color: #eceff1;
+  color: black;
   font-size: 80px;
   font-family: "Poppins", sans-serif;
   animation-name: FadeIn;
@@ -104,18 +86,18 @@ export default {
   transition-timing-function: ease-in-out;
 }
 
-.right_col_mobile {
-  animation-name: FadeIn;
-  animation-duration: 8s;
-  transition-timing-function: ease-in-out;
+.logo_app {
+  animation: rotation 20s linear infinite;
+    height: auto;
+    max-width: 300px;;
 }
 
-@keyframes FadeIn {
+@keyframes rotation {
   from {
-    opacity: 0;
+    transform: rotate(0deg);
   }
   to {
-    opacity: 1;
+    transform: rotate(359deg);
   }
 }
 
@@ -132,12 +114,12 @@ export default {
 }
 
 .text_connect {
-  color: #eceff1;
+  color: black;
   font-family: "Poppins", sans-serif;
 }
 
 .text_coming_mobile {
-  color: #64b5f6;
+  color: black;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-style: italic;
@@ -145,13 +127,13 @@ export default {
 }
 
 .text_connect_mobile {
-  color: #eceff1;
+  color: black;
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
 .my_footer {
-  color: "white";
+  color: black;
   font-family: "Poppins", sans-serif;
   font-size: 11px;
 }
